@@ -3,10 +3,10 @@ import TitleTable from './componnents/titleTable';
 export default function Home() {
   return (
     <div className="flex flex-col mx-auto items-center w-min ">
-      <h1 className="flex gap-2 text-2xl font-bold my-10">
+      <div className="flex gap-2 text-2xl font-bold my-10">
         <svg
-          width="22"
-          height="36"
+          width="40"
+          height="50"
           viewBox="0 0 22 36"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,14 +32,17 @@ export default function Home() {
             fill="#5E60CE"
           />
         </svg>
-        todo
-      </h1>
+        <p className="text-4xl">
+          <span className="text-[#4EA8DE]">to</span>
+          <span className="text-[#5E60CE]">do</span>
+        </p>
+      </div>
 
       <div className="flex gap-2">
         <input
           type="text"
           placeholder="Adicione uma nova tarefa"
-          className="w-[736px] h-[54px] rounded-md bg-[#262626] px-4 border-none"
+          className="w-[736px] h-[54px] rounded-md bg-[#262626] px-4 focus:outline-none"
         />
         <button className="flex gap-2 items-center font-bold bg-[#1E6F9F] p-4 rounded-md ">
           Criar
@@ -64,6 +67,43 @@ export default function Home() {
       <div className="flex justify-between w-full mt-16">
         <TitleTable title="Tarefas criadas" count={1} />
         <TitleTable title="Concluidas" count={2} />
+      </div>
+      <div className="flex flex-col items-center gap-4 mt-16">
+        <svg
+          width="64px"
+          height="64px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="#808080"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+          <g id="SVGRepo_iconCarrier">
+            {' '}
+            <path
+              opacity="0.5"
+              d="M16 4.00195C18.175 4.01406 19.3529 4.11051 20.1213 4.87889C21 5.75757 21 7.17179 21 10.0002V16.0002C21 18.8286 21 20.2429 20.1213 21.1215C19.2426 22.0002 17.8284 22.0002 15 22.0002H9C6.17157 22.0002 4.75736 22.0002 3.87868 21.1215C3 20.2429 3 18.8286 3 16.0002V10.0002C3 7.17179 3 5.75757 3.87868 4.87889C4.64706 4.11051 5.82497 4.01406 8 4.00195"
+              stroke="#808080"
+              stroke-width="1.5"
+            />{' '}
+            <path d="M8 14H16" stroke="#808080" stroke-width="1.5" stroke-linecap="round" />{' '}
+            <path d="M7 10.5H17" stroke="#808080" stroke-width="1.5" stroke-linecap="round" />{' '}
+            <path d="M9 17.5H15" stroke="#808080" stroke-width="1.5" stroke-linecap="round" />{' '}
+            <path
+              d="M8 3.5C8 2.67157 8.67157 2 9.5 2H14.5C15.3284 2 16 2.67157 16 3.5V4.5C16 5.32843 15.3284 6 14.5 6H9.5C8.67157 6 8 5.32843 8 4.5V3.5Z"
+              stroke="#808080"
+              stroke-width="1.5"
+            />{' '}
+          </g>
+        </svg>
+        <p className="text-base text-[#808080]">
+          <span className="font-semibold">Você ainda não tem tarefas cadastradas</span>
+          <br />
+          Crie tarefas e organize seus itens a fazer
+        </p>
       </div>
       <hr />
     </div>
