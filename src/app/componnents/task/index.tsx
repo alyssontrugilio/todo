@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 type TaskProps = {
   text: string;
   removeTask: () => void;

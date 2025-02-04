@@ -10,12 +10,11 @@ export default function Home() {
   const [taskList, setTaskList] = useState(taskMock);
   const [newTask, setNewTask] = useState('');
   const [isListEmpty, setIsListEmpty] = useState(true);
-  const [qtdCompleted, setQtdCompleted] = useState(0);
 
   const addNewTask = (textTask: string) => {
     setNewTask('');
     setIsListEmpty(false);
-    let addTaskType: TaskType = {
+    const addTaskType: TaskType = {
       id: taskList.length + 1,
       text: textTask,
     };
